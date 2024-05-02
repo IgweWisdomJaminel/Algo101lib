@@ -1,61 +1,55 @@
+
+
 public class Book {
+
+    // Properties, Fields, Global Variables
     String title;
     int pageCount;
     int ISBN;
-    boolean isChecked;
-    int dayCheckedout =-1;
+    boolean isCheckedOut; // whether or not the book is checked out
+    int dayCheckedOut = -1;
 
-    public Book(String title, int pageCount, int ISBN, boolean isChecked, int dayCheckedout) {
-        this.title = title;
-        this.pageCount = pageCount;
-        this.ISBN = ISBN;
-        this.isChecked = false;
-        this.dayCheckedout = dayCheckedout;
-    }
-    //Getters
-    public String getTitle() { 
-        return title;
+    // Constructor
+    public Book(String bookTitle, int bookPageCount, int bookISBN) {
+        this.title = bookTitle;
+        this.pageCount = bookPageCount;
+        this.ISBN = bookISBN;
+        isCheckedOut = false;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    // Getters --> INSTANCE METHODS
+    public String getTitle() {
+        return this.title;
     }
 
     public int getPageCount() {
-        return pageCount;
-    }
-
-    public void setPageCount(int pageCount) {
-        this.pageCount = pageCount;
+        return this.pageCount;
     }
 
     public int getISBN() {
-        return ISBN;
+        return this.ISBN;
     }
 
-    public void setISBN(int ISBN) {
-        this.ISBN = ISBN;
+    public boolean getIsCheckedOut() {
+        return this.isCheckedOut;
     }
 
-    public boolean isChecked() {
-        return isChecked;
+    public int getDayCheckedOut() {
+        return this.dayCheckedOut;
     }
 
-    public void setChecked( boolean newischecked,int cureentDayCheckedOut) {
-        this.isChecked=newischecked;
-        setDayCheckedout(cureentDayCheckedOut);
-       
+    // SETTERS
+    public void setIsCheckedOut(boolean newIsCheckedOut, int currentDayCheckedOut) {
+        this.isCheckedOut = newIsCheckedOut;
+        setDayCheckedOut(currentDayCheckedOut);
     }
 
-    public int getDayCheckedout() {
-        return dayCheckedout;
-    }
-
-    public void setDayCheckedout(int dayCheckedout) {
-        this.dayCheckedout = dayCheckedout;
+    private void setDayCheckedOut(int day) {
+        this.dayCheckedOut = day;
     }
 
     public static void main(String[] args) {
-         
+
     }
+
 }
