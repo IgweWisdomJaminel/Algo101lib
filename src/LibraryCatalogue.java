@@ -90,7 +90,18 @@ public class LibraryCatalogue {
         }
 
     public static void main(String[] args) {
-
+        // TODO code application logic here
+        Map<String, Book> bookCollection = new HashMap<String,Book>();
+        Book harry = new Book("Harry Potter", 827132, 9999999);
+        bookCollection.put("Harry Potter", harry);
+        LibraryCatalogue lib = new LibraryCatalogue(bookCollection);
+        lib.checkOutBook("Harry Potter");
+        lib.nextDay();
+        lib.nextDay();
+        lib.checkOutBook("Harry Potter");
+        lib.setDay(17);
+        lib.returnBook("Harry Potter");
+        lib.checkOutBook("Harry Potter");
     }
 
     }
