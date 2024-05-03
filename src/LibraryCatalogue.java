@@ -78,7 +78,7 @@ public class LibraryCatalogue {
                 System.out.println("You owe the library $" + (getInitialLateFee() + daysLate * getFeePerLateDay()) +
                         " because your book is "+ daysLate+ " days overdue.");
             } else {
-                System.out.println("Book Returned. Thank you");
+                System.out.println("Book Returned. Thank you 😂");
             }
             book.setIsCheckedOut(false, -1);
         }
